@@ -10,12 +10,10 @@ PERSONAL_SPACE = 4
 # I'm the Juggernaut, bitch.
 JUGGERNAUT = 15
 
-
 MAX_VALUE = 2147483647
 
 
 class PlayerAI:
-
     def __init__(self):
         self.nests = []
         # occupied means don't make a nest here
@@ -90,7 +88,7 @@ class Drone:
                                                       self.closest_enemy.position,
                                                       self.nests)
             self.enemy_distance = len(enemy_path) if enemy_path else MAX_VALUE
- 
+
         actions = [self.fight,
                    self.invade,
                    self.defend,
@@ -129,7 +127,7 @@ class Drone:
         num_friendly_adjacent = 0
         for d, adj_tile in self.world.get_tiles_around(tile.position).items():
             if self.world.is_wall(adj_tile.position) or adj_tile.is_friendly():
-                num_friendly_adjacent+=1
+                num_friendly_adjacent += 1
         return num_friendly_adjacent
 
     def fight(self):
@@ -156,7 +154,7 @@ class Drone:
             closest = in_danger_nest
             shortest = self.world.get_taxicab_distance(self.closest_enemy.position, closest)
             for d, t in neighbours.items():
-                distance = self.world.get_taxicab_distance (self.closest_enemy.position, t.position)
+                distance = self.world.get_taxicab_distance(self.closest_enemy.position, t.position)
                 if distance < shortest:
                     closest = t.position
                     shortest = distance
@@ -188,7 +186,7 @@ class Drone:
     def strengthen(self):
         if self.enemy_distance < PERSONAL_SPACE \
                 and self.closest_enemy.health - self.unit.health > 0 \
-                and self.world.get_closest_friendly_from(self.closest_enemy.position, None).uuid == self.unit.uuid: 
+                and self.world.get_closest_friendly_from(self.closest_enemy.position, None).uuid == self.unit.uuid:
             # Do nothing and gain 1 health
             return True
         return False

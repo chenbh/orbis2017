@@ -121,8 +121,18 @@ class Drone:
 
     def fight(self):
         if self.enemy_distance == 1:
-            self.world.move(self.unit, self.closest_enemy.position)
-            return True
+            # Attack the largest health enemy
+            enemy_dict = self.world.get_position_to_enemy_dict()
+            target_enemy = None
+            for d, position in self.world.get_neighbours(self.unit.position).items():
+                if position in enemy_dict:
+                    candidate_enemy = enemy_dict[position]
+                    if target_enemy is None:
+                        target_enemy = candidate_enemy
+                    else:
+                        target_enemy = candidate_enemy if candidate_enemy.health > target_enemy.health else target_enemy
+                    self.world.move(self.unit, target_enemy.position)
+                    return True
         return False
 
     def defend(self):

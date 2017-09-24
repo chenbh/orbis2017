@@ -4,7 +4,13 @@ from PythonClientAPI.Game.Enums import Direction, MoveType, MoveResult
 from PythonClientAPI.Game.World import World
 from pprint import pprint
 
+# Range that Drones use to consider actions
 PERSONAL_SPACE = 4
+# Min HP for a Drone to initiate a bullrush at the enemy
+# I'm the Juggernaut, bitch.
+JUGGERNAUT = 20
+
+
 MAX_VALUE = 2147483647
 
 class PlayerAI:
@@ -131,7 +137,12 @@ class Drone:
         return False
 
     def invade(self):
-
+        if self.unit.health > int(JUGGERNAUT / 2):
+            target_nest = self.world.get_closest_enemy_nest_from(self.unit.position, None)
+            nest_path = self.world.get_shortest_path(self.unit.position, target_nest, self.nests)
+            if self.unit.health > JUGGERNAUT or len(nest_path) < PERSONAL_SPACE * 2:
+                self.world.move(self.unit, nest_path[0])
+                return True
         return False
 
     def chase(self):

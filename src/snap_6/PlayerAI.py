@@ -189,7 +189,7 @@ class Drone:
         if self.unit.health > int(JUGGERNAUT / 2):
             target_nest = self.world.get_closest_enemy_nest_from(self.unit.position, None)
             nest_path = self.world.get_shortest_path(self.unit.position, target_nest, self.current_nests)
-            if (self.unit.health >= JUGGERNAUT or len(nest_path) < PERSONAL_SPACE * 1) and nest_path:
+            if self.unit.health >= JUGGERNAUT or (nest_path and len(nest_path) < PERSONAL_SPACE * 1):
                 self.move(nest_path[0])
                 return True
         return False

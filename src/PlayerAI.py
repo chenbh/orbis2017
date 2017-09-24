@@ -11,6 +11,7 @@ class PlayerAI:
 
     def __init__(self):
         self.nests = []
+        # occupied means don't make a nest here
         self.occupied = []
 
     def do_move(self, world, friendly_units, enemy_units):
@@ -21,7 +22,19 @@ class PlayerAI:
                 self.nests.remove(n)
                 self.occupied.append(n)
             else:
+                is_invalid_nest = False
                 tiles = world.get_tiles_around(n)
+                for d, t in tiles.items():
+                    if world.get_tile_at(t.position) and not t.is_friendly():
+                        if t.position in self.nests:
+                            self.nests.remove(n)
+                            self.occupied.append(n)
+                            is_invalid_nest = True
+                            continue
+                
+                if is_invalid_nest:
+                    continue
+
                 for d, t in tiles.items():
                     if world.get_tile_at(t.position) and not t.is_friendly():
                         closest_friendly = world.get_closest_friendly_from(t.position, self.nests)
@@ -32,6 +45,8 @@ class PlayerAI:
                             self.nests.remove(n)
                             self.occupied.append(n)
 
+        print("nests")
+        print(self.nests)
         # Fly away to freedom, daring fireflies
         # Build thou nests
         # Grow, become stronger

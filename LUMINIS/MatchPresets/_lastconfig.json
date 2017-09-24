@@ -1,1 +1,1 @@
-{"mapName":"Open Map","playerPaths":["/home/jason/Documents/orbisChallenge/NoIDE/src/PlayerAI.py","/home/jason/Documents/orbisChallenge/NoIDE/src/PlayerAI.py"],"maxResponseTime":600,"turnLimit":101,"portNumber":4461,"serverTimeout":0,"playerLaunchTypes":["AI","AI"]}
+{"mapName":"Halves","playerPaths":["C:/Users/Daniel/Documents/side projects/orbis 2017/src/snap_4/PlayerAI.py","C:/Users/Daniel/Documents/side projects/orbis 2017/src/PlayerAI.py"],"maxResponseTime":1073741823,"turnLimit":100,"portNumber":4461,"serverTimeout":0,"playerLaunchTypes":["AI","AI"]}

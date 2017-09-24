@@ -22,6 +22,7 @@ class PlayerAI:
 
     def do_move(self, world, friendly_units, enemy_units):
         builders = {}
+        assigned_builder_units = set()
 
         for n in self.nests:
             if not world.get_tile_at(n).is_neutral():
@@ -33,6 +34,7 @@ class PlayerAI:
 
                 # save possible builders
                 candidate_builders = []
+                candidate_assigned_builder_units = set()
 
                 for d, t in tiles.items():
                     if world.get_tile_at(t.position) and not t.is_friendly():
@@ -41,18 +43,28 @@ class PlayerAI:
                             self.occupied.append(n)
                             is_invalid_nest = True
                             break
-                        closest_friendly = world.get_closest_friendly_from(t.position, self.nests)
-                        if world.get_shortest_path(t.position, closest_friendly.position, self.nests):
+                        closest_friendly = world.get_closest_friendly_from(
+                            t.position,
+                            assigned_builder_units.union(candidate_assigned_builder_units)
+                        )
+                        if closest_friendly and world.get_shortest_path(t.position, closest_friendly.position, self.nests):
                             # FIXME: some fireflies are assigned two spots. Only one will be taken
+                            if closest_friendly.position in assigned_builder_units:
+                                print("Double assigned")
                             candidate_builders.append((closest_friendly.uuid, t.position))
+                            assigned_builder_units.add(closest_friendly.position)
+                            print("found a builder")
                         else:
                             self.nests.remove(n)
                             self.occupied.append(n)
                             is_invalid_nest = True
                             break
-                for builder in candidate_builders:
-                    builders[builder[0]] = builder[1]
-                    self.occupied.append(builder[1])
+
+                if not is_invalid_nest:
+                    for builder in candidate_builders:
+                        builders[builder[0]] = builder[1]
+                        self.occupied.append(builder[1])
+                    assigned_builder_units.update(candidate_assigned_builder_units)
 
 
         # Fly away to freedom, daring fireflies
@@ -121,18 +133,8 @@ class Drone:
 
     def fight(self):
         if self.enemy_distance == 1:
-            # Attack the largest health enemy
-            enemy_dict = self.world.get_position_to_enemy_dict()
-            target_enemy = None
-            for d, position in self.world.get_neighbours(self.unit.position).items():
-                if position in enemy_dict:
-                    candidate_enemy = enemy_dict[position]
-                    if target_enemy is None:
-                        target_enemy = candidate_enemy
-                    else:
-                        target_enemy = candidate_enemy if candidate_enemy.health > target_enemy.health else target_enemy
-                    self.world.move(self.unit, target_enemy.position)
-                    return True
+            self.world.move(self.unit, self.closest_enemy.position)
+            return True
         return False
 
     def defend(self):

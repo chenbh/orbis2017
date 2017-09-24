@@ -2,7 +2,6 @@ from PythonClientAPI.Game import PointUtils
 from PythonClientAPI.Game.Entities import FriendlyUnit, EnemyUnit, Tile
 from PythonClientAPI.Game.Enums import Direction, MoveType, MoveResult
 from PythonClientAPI.Game.World import World
-from utils import *
 from pprint import pprint
 
 PERSONAL_SPACE = 4
@@ -12,10 +11,6 @@ class PlayerAI:
     def __init__(self):
         self.nests = []
         self.occupied = []
-        """
-        Any instantiation code goes here
-        """
-        pass
 
     def do_move(self, world, friendly_units, enemy_units):
         builders = {}
@@ -41,14 +36,14 @@ class PlayerAI:
         # Grow, become stronger
         # Take over the world
         for unit in friendly_units:
-            Unit(unit, world, friendly_units, enemy_units, builders, self)
+            Drone(unit, world, friendly_units, enemy_units, builders, self)
 
     def start_nest(self, pos):
         self.nests.append(pos)
         self.occupied.append(pos)
 
 
-class Unit:
+class Drone:
     def __init__(self, unit, world, friendly_units, enemy_units, builders, controller):
         self.unit = unit
         self.world = world

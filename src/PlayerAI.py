@@ -51,11 +51,11 @@ class PlayerAI:
                             break
                         closest_friendly = world.get_closest_friendly_from(
                             t.position,
-                            assigned_builder_units.union(candidate_assigned_builder_units)
+                            None
                         )
                         if closest_friendly and world.get_shortest_path(t.position, closest_friendly.position, self.nests):
                             candidate_builders.append((closest_friendly.uuid, t.position))
-                            assigned_builder_units.add(closest_friendly.position)
+                            candidate_assigned_builder_units.add(closest_friendly.position)
                         else:
                             self.nests.remove(n)
                             self.occupied.append(n)
@@ -67,6 +67,20 @@ class PlayerAI:
                         builders[builder[0]] = builder[1]
                         self.occupied.append(builder[1])
                     assigned_builder_units.update(candidate_assigned_builder_units)
+
+        # assign nest locations if they aren't assigned on first pass
+        assigned_locations = builders.values()
+        for n in self.nests:
+            tiles = world.get_tiles_around(n)
+            for d, t in tiles.items():
+                if t.position not in assigned_locations:
+                    closest_friendly = world.get_closest_friendly_from(
+                        t.position,
+                        assigned_builder_units
+                    )
+                    if closest_friendly and world.get_shortest_path(t.position, closest_friendly.position, self.nests):
+                        builders[closest_friendly] = t.position
+
 
         self.current_nests = world.get_friendly_nest_positions()
 
@@ -195,7 +209,7 @@ class Drone:
         if self.unit.health > int(JUGGERNAUT / 2):
             target_nest = self.world.get_closest_enemy_nest_from(self.unit.position, None)
             nest_path = self.world.get_shortest_path(self.unit.position, target_nest, self.current_nests)
-            if (self.unit.health >= JUGGERNAUT or len(nest_path) < PERSONAL_SPACE * 1) and nest_path:
+            if nest_path and (self.unit.health >= JUGGERNAUT or len(nest_path) < PERSONAL_SPACE * 1):
                 self.move(nest_path[0])
                 return True
         return False
@@ -225,8 +239,6 @@ class Drone:
 
     # what to do if this Drone is desginated as a builder for a nest
     def build_nest(self):
-        # does checking for merged uuids help?
-        # if any(self.unit.is_merged_with_unit(uuid) for uuid in self.builders.keys()) or self.unit.uuid in self.builders:
         if self.unit.uuid in self.builders:
             path = self.world.get_shortest_path(self.unit.position, self.builders[self.unit.uuid], self.nests)
             if path:

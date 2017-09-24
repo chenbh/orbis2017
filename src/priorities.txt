@@ -1,0 +1,19 @@
+- If enemy adjacent => attack enemy
+
+# defend
+- If friendly nest in area and enemy in area => move to closest nest
+
+# invade
+- If enemy nest in area 
+
+# combat
+- If current health > enemy health => move toward enemy
+- If current health < enemy and current pos closest to enemy => stay still
+- If current health < enemy and there exists ally closer to enemy => move to ally
+
+# construction / economy
+- If no enemy in area and has buildable nest in area => build nest
+- If no enemy in area => start nest
+
+
+- Move toward uncapture territory

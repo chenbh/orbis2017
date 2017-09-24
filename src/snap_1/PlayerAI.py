@@ -65,8 +65,6 @@ class Drone:
             self.enemy_distance = len(enemy_path) if enemy_path else 2147483647
  
         actions = [self.fight,
-                   self.invade,
-                   self.defend,
                    self.chase,
                    self.strengthen,
                    self.reinforce,
@@ -93,21 +91,6 @@ class Drone:
         if self.enemy_distance == 1:
             self.world.move(self.unit, self.closest_enemy.position)
             return True
-        return False
-
-    def defend(self):
-        in_danger_nest = self.world.get_closest_friendly_nest_from(self.closest_enemy.position, None)
-        enemy_distance_from_nest = self.world.get_shortest_path_distance(self.closest_enemy.position,
-                                                                         in_danger_nest)
-        self_distance_from_nest = self.world.get_shortest_path_distance(self.unit.position,
-                                                                        in_danger_nest)
-        if self_distance_from_nest < enemy_distance_from_nest < int(PERSONAL_SPACE * 1):
-            self.world.move(self.unit, in_danger_nest)
-            return True
-        return False
-
-    def invade(self):
-
         return False
 
     def chase(self):

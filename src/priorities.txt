@@ -1,3 +1,4 @@
+# survival
 - If enemy adjacent => attack enemy
 
 # defend
@@ -15,5 +16,5 @@
 - If no enemy in area and has buildable nest in area => build nest
 - If no enemy in area => start nest
 
-
+# catch-all
 - Move toward uncapture territory

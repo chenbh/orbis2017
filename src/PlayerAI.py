@@ -48,12 +48,8 @@ class PlayerAI:
                             assigned_builder_units.union(candidate_assigned_builder_units)
                         )
                         if closest_friendly and world.get_shortest_path(t.position, closest_friendly.position, self.nests):
-                            # FIXME: some fireflies are assigned two spots. Only one will be taken
-                            if closest_friendly.position in assigned_builder_units:
-                                print("Double assigned")
                             candidate_builders.append((closest_friendly.uuid, t.position))
                             assigned_builder_units.add(closest_friendly.position)
-                            print("found a builder")
                         else:
                             self.nests.remove(n)
                             self.occupied.append(n)
@@ -130,6 +126,13 @@ class Drone:
             if self.world.is_wall(adj_tile.position) or adj_tile.is_friendly():
                 num_friendly_adjacent+=1
         return num_friendly_adjacent
+
+    def tiles_distance_two_around(self, position):
+        immediate_tiles = self.world.get_tiles_around(position)
+        all_nearby_tiles = set([tile for nearby_tile in immediate_tiles for tile in self.world.get_tiles_around(nearby_tile)])
+        current_tile = world.get_tile_at(position)
+        all_nearby_tiles.discard(current_tile)
+        return list(all_nearby_tiles)
 
     def fight(self):
         if self.enemy_distance == 1:

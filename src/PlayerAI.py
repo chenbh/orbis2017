@@ -63,10 +63,11 @@ class Unit:
         self.enemy_distance = self.world.get_taxicab_distance(self.unit.position, self.closest_enemy.position)
 
         if self.enemy_distance < PERSONAL_SPACE * 2:
-            self.enemy_distance = len(self.world.get_shortest_path(unit.position,
-                                                                   self.closest_enemy.position,
-                                                                   self.nests))
-
+            enemy_path = self.world.get_shortest_path(unit.position,
+                                                        self.closest_enemy.position,
+                                                        self.nests)
+            self.enemy_distance = len(enemy_path) if enemy_path else 2147483647
+ 
         actions = [self.fight,
                    self.chase,
                    self.strengthen,

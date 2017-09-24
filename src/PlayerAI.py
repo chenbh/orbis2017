@@ -106,7 +106,8 @@ class Unit:
     def strengthen(self):
         if self.enemy_distance < PERSONAL_SPACE \
                 and self.closest_enemy.health - self.unit.health > 0 \
-                and self.world.get_closest_friendly_from(self.closest_enemy.position, None).uuid == self.unit.uuid:
+                and self.world.get_closest_friendly_from(self.closest_enemy.position, None).uuid == self.unit.uuid: 
+            # Do nothing and gain 1 health
             return True
         return False
 

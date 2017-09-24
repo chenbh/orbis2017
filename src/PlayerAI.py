@@ -5,7 +5,7 @@ from PythonClientAPI.Game.World import World
 from pprint import pprint
 
 PERSONAL_SPACE = 4
-
+MAX_VALUE = 2147483647
 
 class PlayerAI:
 
@@ -62,7 +62,7 @@ class Drone:
             enemy_path = self.world.get_shortest_path(unit.position,
                                                       self.closest_enemy.position,
                                                       self.nests)
-            self.enemy_distance = len(enemy_path) if enemy_path else 2147483647
+            self.enemy_distance = len(enemy_path) if enemy_path else MAX_VALUE
  
         actions = [self.fight,
                    self.chase,
@@ -86,6 +86,13 @@ class Drone:
                 shortest = distance
                 closest = enemy
         return closest
+
+    def num_adjacent_friendly_and_walls(self, tile):
+        num_friendly_adjacent = 0
+        for d, adj_tile in self.world.get_tiles_around(tile.position).items():
+            if self.world.is_wall(adj_tile.position) or adj_tile.is_friendly():
+                num_friendly_adjacent+=1
+        return num_friendly_adjacent
 
     def fight(self):
         if self.enemy_distance == 1:
@@ -114,6 +121,8 @@ class Drone:
         return False
 
     def build_nest(self):
+        #does checking for merged uuids help?
+        #if any(self.unit.is_merged_with_unit(uuid) for uuid in self.builders.keys()) or self.unit.uuid in self.builders:
         if self.unit.uuid in self.builders:
             path = self.world.get_shortest_path(self.unit.position, self.builders[self.unit.uuid], self.nests)
             if path:
@@ -125,9 +134,25 @@ class Drone:
         if self.enemy_distance < PERSONAL_SPACE * 2:
             return False
         tiles = self.world.get_tiles_around(self.unit.position)
+
+        most_ideal_tile = None
+        most_adjacent_friendly = -1
+        first_candidate_tile = None
         for d, t in tiles.items():
             if t.is_neutral() and t.position not in self.nests and t.position not in self.occupied:
-                self.controller.start_nest(t.position)
+                num_friendly = self.num_adjacent_friendly_and_walls(t)
+                if first_candidate_tile is None:
+                    first_candidate_tile = t
+                if num_friendly > most_adjacent_friendly:
+                    most_adjacent_friendly = num_friendly
+                    most_ideal_tile = t
+
+        if self.enemy_distance < PERSONAL_SPACE * 3 and most_ideal_tile is not None:
+            print("Took greedy nest")
+            self.controller.start_nest(most_ideal_tile.position)
+        elif first_candidate_tile is not None:
+            print("Took safe nest")
+            self.controller.start_nest(first_candidate_tile.position)
         return False
 
     def expand(self):

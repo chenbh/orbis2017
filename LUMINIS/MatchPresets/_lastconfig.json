@@ -1,1 +1,1 @@
-{"mapName":"Nesting Cores","playerPaths":["/home/jason/Documents/orbisChallenge/NoIDE/src/PlayerAI.py","Bots/PythonAI/PlayerAI.py"],"maxResponseTime":600,"turnLimit":500,"portNumber":4461,"serverTimeout":0,"playerLaunchTypes":["AI","AI"]}
+{"mapName":"Open Map","playerPaths":["/home/jason/Documents/orbisChallenge/NoIDE/src/PlayerAI.py","/home/jason/Documents/orbisChallenge/NoIDE/src/PlayerAI.py"],"maxResponseTime":600,"turnLimit":101,"portNumber":4461,"serverTimeout":0,"playerLaunchTypes":["AI","AI"]}

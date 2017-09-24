@@ -141,9 +141,12 @@ class Drone:
         return num_friendly_adjacent
 
     def tiles_distance_two_around(self, position):
-        immediate_tiles = self.world.get_tiles_around(position)
-        all_nearby_tiles = set([tile for nearby_tile in immediate_tiles for tile in self.world.get_tiles_around(nearby_tile)])
-        current_tile = world.get_tile_at(position)
+        immediate_tiles = list(self.world.get_tiles_around(position).values())
+        print("immediate_tiles")
+        print(immediate_tiles)
+        all_nearby_tiles = set([tile for nearby_tile in immediate_tiles for tile in list(self.world.get_tiles_around(nearby_tile.position).values())])
+        all_nearby_tiles.update(immediate_tiles)
+        current_tile = self.world.get_tile_at(position)
         all_nearby_tiles.discard(current_tile)
         return list(all_nearby_tiles)
 
@@ -217,12 +220,16 @@ class Drone:
     def start_nest(self):
         if self.enemy_distance < PERSONAL_SPACE * 2:
             return False
-        tiles = self.world.get_tiles_around(self.unit.position)
+        #tiles = self.world.get_tiles_around(self.unit.position)
+        tiles = self.tiles_distance_two_around(self.unit.position)
+        print("tiles")
+        print(list(map(lambda t: t.position, tiles)))
+        print(self.unit.position)
 
         most_ideal_tile = None
         most_adjacent_friendly = -1
         first_candidate_tile = None
-        for d, t in tiles.items():
+        for t in tiles:
             if t.is_neutral() and t.position not in self.nests and t.position not in self.occupied:
                 num_friendly = self.num_adjacent_friendly_and_walls(t)
                 if first_candidate_tile is None:
@@ -231,7 +238,7 @@ class Drone:
                     most_adjacent_friendly = num_friendly
                     most_ideal_tile = t
 
-        if self.enemy_distance < PERSONAL_SPACE * 3 and most_ideal_tile is not None:
+        if self.enemy_distance < PERSONAL_SPACE * 1 and most_ideal_tile is not None:
             self.controller.start_nest(most_ideal_tile.position)
         elif first_candidate_tile is not None:
             self.controller.start_nest(first_candidate_tile.position)

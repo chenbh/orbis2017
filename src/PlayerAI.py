@@ -24,29 +24,31 @@ class PlayerAI:
             else:
                 is_invalid_nest = False
                 tiles = world.get_tiles_around(n)
+
+                # save possible builders
+                candidate_builders = []
+
                 for d, t in tiles.items():
                     if world.get_tile_at(t.position) and not t.is_friendly():
                         if t.position in self.nests:
                             self.nests.remove(n)
                             self.occupied.append(n)
                             is_invalid_nest = True
-                            continue
-                
-                if is_invalid_nest:
-                    continue
-
-                for d, t in tiles.items():
-                    if world.get_tile_at(t.position) and not t.is_friendly():
+                            break
                         closest_friendly = world.get_closest_friendly_from(t.position, self.nests)
                         if world.get_shortest_path(t.position, closest_friendly.position, self.nests):
-                            builders[closest_friendly.uuid] = t.position
-                            self.occupied.append(t.position)
+                            # FIXME: some fireflies are assigned two spots. Only one will be taken
+                            candidate_builders.append((closest_friendly.uuid, t.position))
                         else:
                             self.nests.remove(n)
                             self.occupied.append(n)
+                            is_invalid_nest = True
+                            break
+                for builder in candidate_builders:
+                    builders[builder[0]] = builder[1]
+                    self.occupied.append(builder[1])
 
-        print("nests")
-        print(self.nests)
+
         # Fly away to freedom, daring fireflies
         # Build thou nests
         # Grow, become stronger

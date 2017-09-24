@@ -1,11 +1,11 @@
-[17452017] Using port 4461
+[19226765] Using port 4461
 Server waiting for client
 Connected player with UUID src
 Assigned index 0 (Red)
 Server waiting for client
 Connected player with UUID snap_1
 Assigned index 1 (Blue)
-[17453276] Initializing game...
+[19228174] Initializing game...
 [0] src (Comm open) - sending GET_READY...
 [0] src (Comm open) - Ready!
 [1] snap_1 (Comm open) - sending GET_READY...
@@ -22,12 +22,12 @@ java.io.FileNotFoundException: Videos/Gameplay.avi (No such file or directory)
 	at com.orbischallenge.firefly.server.game.Fireflies.start(Fireflies.java:105)
 	at com.orbischallenge.firefly.server.RunServer.runGame(RunServer.java:47)
 	at com.orbischallenge.firefly.server.RunServer.main(RunServer.java:34)
-[17453598] Asking 0 for move
-[17453599] Asking 1 for move
-[17453658] Got 1's move
-[17453668] Got 0's move
-[17453681] ===== Move Frame 0 =========
-[17453682] ==============================
+[19228482] Asking 0 for move
+[19228483] Asking 1 for move
+[19228534] Got 1's move
+[19228575] Got 0's move
+[19228585] ===== Move Frame 0 =========
+[19228585] ==============================
 ...................
 ...................
 ...+...............
@@ -47,12 +47,12 @@ java.io.FileNotFoundException: Videos/Gameplay.avi (No such file or directory)
 ...............-...
 ...................
 ...................
-[17454305] Asking 0 for move
-[17454310] Asking 1 for move
-[17454355] Got 1's move
-[17454379] Got 0's move
-[17454379] ===== Move Frame 1 =========
-[17454380] ==============================
+[19229224] Asking 1 for move
+[19229227] Asking 0 for move
+[19229249] Got 0's move
+[19229273] Got 1's move
+[19229273] ===== Move Frame 1 =========
+[19229273] ==============================
 ...................
 ...................
 ...B...............
@@ -66,72 +66,21 @@ java.io.FileNotFoundException: Videos/Gameplay.avi (No such file or directory)
 ...................
 ...................
 ...................
-...............A...
-...............A...
+...................
+...............AA..
 ..............-A-..
 ...............-...
 ...................
 ...................
-[17454991] Asking 0 for move
-[17454992] Asking 1 for move
-[17455044] Got 1's move
-[17455056] Got 0's move
-[17455056] ===== Move Frame 2 =========
-[17455056] ==============================
+[19229886] Asking 0 for move
+[19229886] Asking 1 for move
+[19229934] Got 1's move
+[19229953] Got 0's move
+[19229954] ===== Move Frame 2 =========
+[19229955] ==============================
 ...................
-...B...............
-...+.B.............
-..+BB+.............
-...+...............
-...................
-...................
-...................
-...................
-...................
-...................
-...................
-...................
-..............AA...
-...............A...
-..............-A-..
-...............-...
-...................
-...................
-[17455666] Asking 1 for move
-[17455666] Asking 0 for move
-[17455730] Got 1's move
-[17455751] Got 0's move
-[17455753] ===== Move Frame 3 =========
-[17455753] ==============================
 ...................
 ...+B..............
-...BB+B............
-..+B+B.............
-...+...............
-...................
-...................
-...................
-...................
-...................
-...................
-...................
-...................
-.............A-AA..
-...............-...
-..............-AA..
-...............-...
-...................
-...................
-[17456362] snap_1 BUILT NEST AT (4, 2)
-[17456362] Asking 0 for move
-[17456362] Asking 1 for move
-[17456400] Got 0's move
-[17456408] Got 1's move
-[17456418] ===== Move Frame 4 =========
-[17456418] ==============================
-...................
-...BB..............
-...+BB+B...........
 ..BB++.............
 ...+.B.............
 ...................
@@ -142,22 +91,21 @@ java.io.FileNotFoundException: Videos/Gameplay.avi (No such file or directory)
 ...................
 ...................
 ...................
-.............---AA.
-.............AA-...
-..............-AAA.
+................A..
+..............AA-..
+..............-A-..
 ...............-...
 ...................
 ...................
-[17457024] src BUILT NEST AT (14, 14)
-[17457024] Asking 0 for move
-[17457024] Asking 1 for move
-[17457077] Got 1's move
-[17457103] Got 0's move
-[17457113] ===== Move Frame 5 =========
-[17457114] ==============================
+[19230570] Asking 0 for move
+[19230570] Asking 1 for move
+[19230621] Got 1's move
+[19230640] Got 0's move
+[19230641] ===== Move Frame 3 =========
+[19230641] ==============================
 ...................
-..BB+B.B...........
-...+BB++...........
+....B..............
+...++..............
 .BBB++.............
 ...+.+B............
 ...................
@@ -168,762 +116,888 @@ java.io.FileNotFoundException: Videos/Gameplay.avi (No such file or directory)
 ...................
 ...................
 ................A..
-.............-A---.
-............A-A-AA.
+..............AA-..
+..............---..
+..............-AA..
+...............-...
+...................
+...................
+[19231250] Asking 0 for move
+[19231250] Asking 1 for move
+[19231301] Got 1's move
+[19231329] Got 0's move
+[19231329] ===== Move Frame 4 =========
+[19231329] ==============================
+....B..............
+....+..............
+.B.++..............
+.B+B++.............
+...B.++B...........
+...................
+...................
+...................
+...................
+...................
+...................
+...................
+...............A-A.
+.............A---..
+..............---..
+..............-AAA.
+...............-...
+...................
+...................
+[19231934] Asking 0 for move
+[19231934] Asking 1 for move
+[19231995] Got 1's move
+[19232013] Got 0's move
+[19232024] ===== Move Frame 5 =========
+[19232024] ==============================
+...B+..............
+.B..+..............
+.+.++..............
+.++B++.............
+.B.B.+++...........
+...B...B...........
+...................
+...................
+...................
+...................
+...................
+...............A.A.
+.............A.---.
+.............----..
+..............---..
 ..............-A-A.
 ...............A.A.
 ...................
 ...................
-[17457721] src BUILT NEST AT (16, 14)
-[17457722] Asking 0 for move
-[17457722] Asking 1 for move
-[17457792] Got 1's move
-[17457812] Got 0's move
-[17457822] ===== Move Frame 6 =========
-[17457823] ==============================
-...B...............
-..+B+BB+...........
-.BB+BB+B...........
-.B+B++.............
-...B.B+............
+[19232629] Asking 0 for move
+[19232629] Asking 1 for move
+[19232697] Got 1's move
+[19232712] Got 0's move
+[19232713] ===== Move Frame 6 =========
+[19232713] ==============================
+...+B..............
+.+BB+..............
+.+B++..............
+.B+BB+.............
+.+B+.+++...........
+..BB...+...........
+.......B...........
 ...................
 ...................
 ...................
+.................A.
+..............A-.-.
+............A-A---.
+.............----..
+..............---..
+..............-A--A
+...............A.-.
+...............A.A.
+...................
+[19233326] snap_1 BUILT NEST AT (2, 2)
+[19233326] snap_1 BUILT NEST AT (2, 4)
+[19233326] snap_1 BUILT NEST AT (3, 1)
+[19233326] src BUILT NEST AT (14, 12)
+[19233327] Asking 0 for move
+[19233327] Asking 1 for move
+[19233373] Got 0's move
+[19233398] Got 1's move
+[19233401] ===== Move Frame 7 =========
+[19233401] ==============================
+...++..............
+.B+BB..............
+.BB++..............
+B++BBB.............
+.BB+B+++...........
+..++B..+...........
+..B...B+...........
 ...................
 ...................
 ...................
-................A..
-..............A.-..
-.............-A-AA.
-............--A-A-.
-............A.-A--.
-..............AA.AA
+..............A..-.
+............A.A-.A.
+............--A---.
+.............----..
+..............---.A
+..............AA---
+...............A.-.
+..............A-.-A
 ...................
-...................
-[17458428] snap_1 BUILT NEST AT (2, 2)
-[17458429] Asking 0 for move
-[17458429] Asking 1 for move
-[17458495] Got 1's move
-[17458497] Got 0's move
-[17458497] ===== Move Frame 7 =========
-[17458497] ==============================
-...B.B.............
-..+++B+B...........
-BBB+BB++...........
-.++B++BB...........
-...B.++............
-...B.B.............
-...................
-...................
-...................
-...................
-...................
-..............AA-..
-..............AAA..
-.............-A---A
-............--A-AA.
-...........A-A-A-A.
-A............AAA.--
-...................
-...B...............
-[17459104] snap_1 BUILT NEST AT (6, 3)
-[17459104] src BUILT NEST AT (13, 15)
-[17459104] src BUILT NEST AT (15, 12)
-[17459105] Asking 0 for move
-[17459105] Asking 1 for move
-[17459165] Got 1's move
-[17459181] Got 0's move
-[17459192] ===== Move Frame 8 =========
-[17459192] ==============================
-...+.B.B...........
-..B+B+++...........
-B+B+B+BB..........B
-.++B++B+...........
-...BB+B............
-..BBB+.............
-...................
-...................
-...................
-...................
-...............A...
-.............AAAA..
-..............-A-..
-.............AA----
-............--A-AAA
-A..........--A-A--A
--..........A.AAA.--
-.............AA....
-..BB.B.............
-[17459800] snap_1 BUILT NEST AT (4, 4)
-[17459800] src BUILT NEST AT (18, 15)
-[17459801] Asking 0 for move
-[17459801] Asking 1 for move
-[17459895] Got 1's move
-[17459897] Got 0's move
-[17459908] ===== Move Frame 9 =========
-[17459908] ==============================
-...+B+B+B..........
-..+BBB++...........
-+BB+B++BB.........B
-.+BB++B+..........B
-...+BBB............
-.BBB+BB............
-...................
-...................
-...................
-...............A...
-..............AA...
-............A--A-A.
-..............AA-..
-.............-A----
-A...........-AA-AAA
--..........--A-AAAA
--..........-A--A.--
-...........AAA-....
-.B++BBB............
-[17460530] snap_1 BUILT NEST AT (4, 0)
-[17460530] snap_1 BUILT NEST AT (6, 0)
-[17460530] src BUILT NEST AT (12, 16)
-[17460531] Asking 0 for move
-[17460531] Asking 1 for move
-[17460596] Got 1's move
-[17460599] Got 0's move
-[17460607] ===== Move Frame 10 =========
-[17460607] ==============================
-.BBBBBBB+B.........
-..+++BB+..........B
-BBB+BB++BB........+
-.BBB++BB.........B+
-...+BB+............
-.+B++BBB...........
-..B..B.............
-...................
-...............A...
-...............A...
-..............-A...
-............--A---A
-............AAAAA..
-A............----AA
--...........AAA-A--
--..........--A-AAAA
--..........-A-AA.AA
-.....B.....-A-A....
-.++++B+B...AA......
-[17461218] snap_1 BUILT NEST AT (2, 0)
-[17461219] src BUILT NEST AT (13, 12)
-[17461219] Asking 1 for move
-[17461219] Asking 0 for move
-[17461278] Got 1's move
-[17461316] Got 0's move
-[17461327] ===== Move Frame 11 =========
-[17461327] ==============================
-B+B+BBB+B+BAA......
-BB++++BB..........+
-BBB+BBBB+B.......B+
-.BBB++BB.B.......++
-...+B+B............
-.+++BBBB...........
-..B..+.B...........
+[19234006] snap_1 BUILT NEST AT (4, 4)
+[19234006] Asking 0 for move
+[19234006] Asking 1 for move
+[19234080] Got 0's move
+[19234093] Got 1's move
+[19234104] ===== Move Frame 8 =========
+[19234104] ==============================
+.B.++..............
+.++BBB.............
+BBB++B.............
++++BBB.............
+.BB+B+++...........
+..++B..+...........
+..+.BB++...........
 ..B................
-..............AA...
-...............A...
-..............A-..A
-............A---A--
-A...........AAAAAAA
--............A----A
--...........-AA-A--
-A..........--A-AAAA
--....B.....AA-AA.-A
-.....+.....---A...A
-.+BBB+B+B..-A.A....
-[17461940] snap_1 BUILT NEST AT (1, 1)
-[17461940] src BUILT NEST AT (17, 12)
-[17461940] Asking 0 for move
-[17461941] Asking 1 for move
-[17462007] Got 1's move
-[17462041] Got 0's move
-[17462041] ===== Move Frame 12 =========
-[17462042] ==============================
-BBB+BBB++++-AA.....
-+BB++++BB........B+
-BBB+BBBBB+B......+B
-.BBB++BB.+.......++
-...+B+B..B.........
-.++BB+BB...........
-..+..+.B...........
-.BB....B.......A...
-.............A--...
-...............-A..
-............A.-AAA-
-A...........---AAAA
--..........AAAAA-A-
-A............AA----
--...........A-A-A--
-AA.........-AA-AAAA
-A...B+....AAA-AA.--
-..BBB+B....---A...A
-B+B+BBB++B.--AAA...
-[17462650] snap_1 BUILT NEST AT (4, 17)
-[17462650] src BUILT NEST AT (13, 18)
-[17462650] src BUILT NEST AT (16, 10)
-[17462650] Asking 0 for move
-[17462650] Asking 1 for move
-[17462752] Got 1's move
-[17462788] Got 0's move
-[17462788] ===== Move Frame 13 =========
-[17462788] ==============================
-+BB+BBBB+++---A..B.
-+BB+++++BB..A....+B
-BBB+B+BBBB+B.....+B
-.BBBB+BB.+.......++
-...+B+B..+.........
-.+BBB++B.B.........
-..+..+BBB......A...
-B++B..B+.......-...
-.............---A..
-............AAAAAA.
-A...........-A-AAAA
--...........AAAA-A-
--..........--A-A-A-
--A.........AAAA----
--A..........--A-A-A
---..B.....AAAA-AAAA
-AABBB+....--A-AA.A-
-B.B+B++B...---A...-
-BBB+B+BB++B--AA-A.A
-[17463401] snap_1 BUILT NEST AT (6, 6)
-[17463402] src BUILT NEST AT (12, 13)
-[17463402] src BUILT NEST AT (13, 10)
-[17463402] src BUILT NEST AT (14, 9)
-[17463403] Asking 0 for move
-[17463403] Asking 1 for move
-[17463498] Got 1's move
-[17463513] Got 0's move
-[17463524] ===== Move Frame 14 =========
-[17463524] ==============================
-+BB+BBB+B++----A.BB
-+BB++++++BB.-A...+B
-BBB+B++BBBB+B....+B
-.BBBB+BB.+.......++
-...+B+B..B.........
-.+BBB+++.+.....A...
-BBB..+BBBB.....-...
-++++B.+B.......-A..
-.............AAAAA.
-A..........A-AAAAAA
--...........-A--AA-
--..........AAAAA---
--A.........--A-A-AA
---........AAAA-----
---A.......AA-AA-A-A
---..+B....AAAA-AAAA
-B-BB++....--A-AA.AA
-+BB+BBB+B..-A-A...-
-+BB++BB+B++B-AAA-AB
-[17464136] snap_1 BUILT NEST AT (1, 6)
-[17464136] src BUILT NEST AT (11, 14)
-[17464137] Asking 0 for move
-[17464137] Asking 1 for move
-[17464235] Got 1's move
-[17464240] Got 0's move
-[17464250] ===== Move Frame 15 =========
-[17464251] ==============================
-+BB+BBB++B+-----A++
-+BB+++++++BB--A..B+
-BBB+BB+BBBB++B...BB
-.BBB+BBBB+B......++
-...+BBBBB+.....A...
-.BBB++++B+.....-...
-BB+..+BBB+B....-A.B
-++B++.++B....AAAAA.
-A...B..B...A.AAAAAA
--..........--AA-AA-
--...........-AAAA--
--A........AAA----AA
---........AAAAAA-A-
---........--AA-----
---A......AAAA-A-A-A
---BB++B..A-AAAAAAAA
-ABB+++B...-AA-AA.-A
-++B+BBB++B.-A-A...-
-BBB+++B++B++-AA-ABB
-[17464866] snap_1 BUILT NEST AT (7, 4)
-[17464867] snap_1 BUILT NEST AT (8, 3)
-[17464867] snap_1 BUILT NEST AT (8, 5)
-[17464868] Asking 0 for move
-[17464868] Asking 1 for move
-[17465013] Got 1's move
-[17465044] Got 0's move
-[17465058] ===== Move Frame 16 =========
-[17465058] ==============================
-++B+BBBB++B------B+
-BBB++++++++BB--A.B+
-BBBBB++BBBBB++B..BB
-.BBB+BBBBB+B...A.++
-...BBBBBBB.....-...
-.BB++B++BB.....-..B
-+B+..+B+BB+B.AAAAAB
-AB+++BB++B.A.-AAAAA
--.B.+B.+B..-AAA-AA-
--..........--AAA---
--A........AAAAA-AAA
---........A--------
---.......AAAAAAAAAA
---........AAAA-----
----......--AA-A-A-A
---B++++B.A--AAAAAAA
--AB+B++B.A-AA-AA.AA
-BBB+B+BB+BBAA-A...B
-+BB+B++B++++-AAAA++
-[17465671] snap_1 BUILT NEST AT (5, 7)
-[17465671] src BUILT NEST AT (11, 10)
-[17465672] Asking 0 for move
-[17465672] Asking 1 for move
-[17465791] Got 0's move
-[17465801] Got 1's move
-[17465812] ===== Move Frame 17 =========
-[17465812] ==============================
-+BB+B+BBB++B-----B+
-+BB++++++++++B--.+B
-BBBBB+++BBB+B++..BB
-.BBB+BBBBBB+B..-.B+
-...BB+BBBBB....-...
-.B++++++BBB..AAAA.+
-BB+..BB++BB+.-AAAAA
--++++BBB++B-AAA-AA-
--.+B+B.++B.--AAA---
--A...B....AAAAA-AAA
---........-A-AA-A--
---.......AAAAAA----
-A-.......----A-AAAA
---.......AAAAA-----
----......--A--A-A-A
---++B+++.---AAAAAAA
-BBB+B+++B--AAAAA.-A
-+BB+B++BBAA-A-A...A
-++B+BB++B+B+-AAAAA+
-[17466422] Asking 0 for move
-[17466422] Asking 1 for move
-[17466543] Got 1's move
-[17466569] Got 0's move
-[17466574] ===== Move Frame 18 =========
-[17466574] ==============================
-++B+B+BBBB++-----++
-BBB++++++++++B--.B+
-BBBBB++++BBB+B+..BB
-.BBBB+BBBBBB+B.-.++
-...BB+BBBBBB.AAA.B.
-.B++++++BBBB.-AAAA+
-Aaa..BB+++B+AAA-AAA
--a+++BBB++BB-AAA---
--A+++BBB++.AAAA-AAA
---.B.BB...----A----
---.......AAAAAA-AA-
---.......--A-A-----
-AA.......---AA-AAAA
---......AAAAAA-----
----.B....-AA--A-A-A
---++B+++.---AAAAAAA
-+BB+B++++B--A-AA.--
-A+B+BB++BB-AAAA...-
-+BB+B+++++AB-AA-AA+
-[17467182] src DESTROYED OPPONENT'S NEST AT (1, 6)
-[17467183] snap_1 BUILT NEST AT (6, 8)
-[17467183] Asking 0 for move
-[17467183] Asking 1 for move
-[17467300] Got 1's move
-[17467311] Got 0's move
-[17467321] ===== Move Frame 19 =========
-[17467322] ==============================
-BBB+BBBBB+++-B---B+
-+BB+++++++B+++--.++
-BBBBB+++++B+B++..BB
-.BBBB+BBBBBBBBA-.B+
-...BB+BBBBBBB-A-A+.
-AB++++++BBBB.AA-AAA
-aaa..BBB+++B---A---
--a++BB+B+++BAAA-AAA
---A+B+BB++.---A----
---.+B++B.AA---A----
---.......--AAAA-AAA
---.......--AA------
-AAA.....A-AAAA-AAAA
---......----AA-----
----.+B...AAA--A-A-A
---B++B++.---AAAAAAA
-A++++B++++B-A-AA.--
--BB+BB+++BB-AAA...-
-++B++B++BB-AAAA--A+
-[17467937] snap_1 DESTROYED OPPONENT'S NEST AT (13, 18)
-[17467937] Asking 0 for move
-[17467937] Asking 1 for move
-[17468113] Got 1's move
-[17468125] Got 0's move
-[17468136] ===== Move Frame 20 =========
-[17468136] ==============================
-+BB+BBBBBBB+-AA--A+
-+BB+++++++B+++--.++
-BBBBB++++++++B+..BB
-.B+BBBBBBBBBBB--.B+
-...BBB+BBBBBBB--AA.
-Aa+B++++BBBB.A-A---
-aaa..BB+B+++----AAA
--aAB+BB+B++AAAA----
----BBBB+B+.---A----
---.+++B+BA-A--A----
-A-.......--AAAA-AAA
-AAA.....A-AAAA---AA
----.....-----A-A-A-
---......----A-bAA--
---B.++B..-AAAAbbbbA
---++++B+.-AAAbAbAAA
-AB++B+B++++BAAAA.--
--BB+B+B+BBBAAbA...-
-BBB+B+B+++--bAA---+
-[17468750] snap_1 DESTROYED OPPONENT'S NEST AT (15, 15)
-[17468750] snap_1 DESTROYED OPPONENT'S NEST AT (12, 16)
-[17468750] snap_1 DESTROYED OPPONENT'S NEST AT (16, 14)
-[17468750] snap_1 DESTROYED OPPONENT'S NEST AT (14, 14)
-[17468750] snap_1 DESTROYED OPPONENT'S NEST AT (13, 15)
-[17468751] Asking 0 for move
-[17468751] Asking 1 for move
-[17468874] Got 0's move
-[17468879] Got 1's move
-[17468884] ===== Move Frame 21 =========
-[17468885] ==============================
-+BB+BBBBBBBB-A---A+
-+BB++++++++++AA-.BB
-BBBBB++++++++B+..+B
-.++BBBBBBBBBBB--AA+
-A..BBB+BBBBBBB-A--.
--a+B++++BBBBB---AAA
-aaaBBBB++B+AAAA----
--a-+BBB++++--------
---B+++B+B+.--AA----
---.++BBBB-AAAAA----
-AAA.....A-AAAAA-AAA
----.....---A-A-----
----.....----AA-A-AA
---......----A-bAb--
-A-+B+++B.-AAAbbAAb-
---++B++B.---bAbbbAA
-BBB+B++BBBAAAAAA.--
-BBB+B++B+++Bbb-...-
-+BB+B++B++--bbAA--+
-[17469496] snap_1 BUILT NEST AT (4, 6)
-[17469496] Asking 1 for move
-[17469496] Asking 0 for move
-[17469606] Got 1's move
-[17469620] Got 0's move
-[17469630] ===== Move Frame 22 =========
-[17469630] ==============================
-+BB+BBBBBBBBAb----B
-+BB++++++++++---.++
-BBBBB+++++++++A..+B
-A++BBBBBBBBB++-A--+
--..BBB+BBBBBB+BAAAA
--aBB++++BBB+B------
-aaB+BBB++++-AA-----
--aBBBBB++++--------
---++++B++BA-AAA----
-AAA+++B++-AAAAA-AAA
----..BBBB--A-AA-A--
----.....---A-A-----
-A--.....---AAA-A-AA
---......----A-bAb--
---++B++B.--AAbbAbb-
-A-BBB+++B-A-bbbAAAA
-BBB+B+++B+-BAAAb.--
-+BB+B+++B+++AbA...-
-++++B+++B+B-bbbAA-+
-[17470254] Asking 1 for move
-[17470254] Asking 0 for move
-[17470404] Got 1's move
-[17470406] Got 0's move
-[17470417] ===== Move Frame 23 =========
-[17470417] ==============================
-BBB+B+BBBBBA-b----B
-+BB++++++++++---.++
-BBBBB+++++++++-..++
--++BBBBBBBBBB+A--AB
--..BBB+BBBBBBB+A---
--BB+++++BBBB+A-----
-aaa+BBBB+++--------
--BB+BBB++++-AAA----
-AAABB+B++AAAAAA-AAA
----+++B++-----A----
----.B+B++B-AAAA-AA-
----...BB---A-A-----
-AA-.....--AAAA-A-AA
---..B...----A-bAb--
---++B+++B--AAbbAbb-
---++B+++BB-AbbbAAAA
-+BBBB+++++-AAb-A.--
-++++B++++BB+bbA...-
-++++BB+++B+-bbA-AA+
-[17471035] Asking 0 for move
-[17471035] Asking 1 for move
-[17471133] Got 0's move
-[17471151] Got 1's move
-[17471151] ===== Move Frame 24 =========
-[17471151] ==============================
-BBBBB+BBBBA--b---BB
-BBB++++++++++---.++
-BBBBB++++++B++-..++
-B+BBBBBBBBBBB+----+
--..BBB+BBBBB+BA----
-Ba++++++BBBB+------
-aaBBBBBBB++BAAA----
-AA++BB+B+A+AAAA-AAA
---BBB+BB+-----A----
----++++B+-Ab-bbb---
----B+B++++BAAbA-AAA
----..B++B-AAAA-b-b-
-AAA.....----bbbbbbA
---..+B..---bbbbAbb-
---+++B++B-bAAbbAbb-
---BB+B+++B-AbbbAbAA
-+B+++B++++BAbb-A.--
-++++BB++++B+Ab-.AA-
-+++++B++++B-bbAA--A
-[17471757] snap_1 DESTROYED OPPONENT'S NEST AT (11, 10)
-[17471757] snap_1 DESTROYED OPPONENT'S NEST AT (11, 14)
-[17471757] snap_1 DESTROYED OPPONENT'S NEST AT (15, 12)
-[17471757] snap_1 DESTROYED OPPONENT'S NEST AT (14, 9)
-[17471757] snap_1 DESTROYED OPPONENT'S NEST AT (13, 12)
-[17471757] snap_1 DESTROYED OPPONENT'S NEST AT (13, 10)
-[17471758] snap_1 DESTROYED OPPONENT'S NEST AT (17, 12)
-[17471758] snap_1 DESTROYED OPPONENT'S NEST AT (12, 13)
-[17471758] src BUILT NEST AT (17, 17)
-[17471758] Asking 0 for move
-[17471758] Asking 1 for move
-[17471859] Got 1's move
-[17471880] Got 0's move
-[17471880] ===== Move Frame 25 =========
-[17471880] ==============================
-BBB+BBBB++B--b---+B
-+BB++++++++B+---.++
-BBBBB+++++B+++-..++
-BBBBB+BBBBB+B+----+
-B..BBB+BBB+BBA-----
-+B++++++BB+B+-A----
-AaBBBBBBBB+AAAA-AAA
--ABB+BB+B-+---A----
---+B++BBB-----b----
----+++++B--b-bbb---
-A-B+B+++++AAAAb-AAA
----.B++++B-b-b-b-b-
-AAAA....----bbbbbbb
---..++B.---bbbbbAb-
---BB++B+B-bbbbbbAb-
--B++++B+++BAAbbbAAA
-++++B+B+++BAbb-ABb-
-++++B+B++++AbbAAAAb
-++BB++BBB++-bbb--B-
-[17472485] snap_1 DESTROYED OPPONENT'S NEST AT (17, 17)
-[17472485] snap_1 BUILT NEST AT (16, 16)
-[17472486] Asking 0 for move
-[17472486] Asking 1 for move
-[17472608] Got 0's move
-[17472656] Got 1's move
-[17472656] ===== Move Frame 26 =========
-[17472657] ==============================
-+BB+BBBBB++B-b---++
-+BB++++++++++---.++
-BBBBB++++++B++-..+B
-BBBBB+BBBB+B++----B
-+BBBBB+BBB++A------
-AB++++++BBBAAAA-AAA
-aaBBBBBBB++---A----
--BB++BBB+B+--------
---B+++BBBB----b----
---B++++++B-b-bbb---
-AA+B++++++bAAbb-AAA
----.+++++BAA-b-b-b-
--AA-....----bbbbbbb
---BB+++B---bbbbbbb-
---+++++B+BbbbbbbAb-
--B++B++B+++BbbbbAAA
-++++B++B++AAbbAABb-
-++++B++B+++-bb--ABb
-BBB+B++BBBB-bbb--bB
-[17473261] snap_1 BUILT NEST AT (2, 4)
-[17473262] Asking 0 for move
-[17473262] Asking 1 for move
-[17473333] Got 0's move
-[17473359] Got 1's move
-[17473360] ===== Move Frame 27 =========
-[17473360] ==============================
-BBB+BBBBBB++-b---++
-BBB++++++++++---.++
-BBBBB+++++++++-..++
-+BBBB+BBBBBBA+---B+
-+BBBBB+BBB++-AA-AAA
-BBBBB+++BB+A--A----
-aaa+BBBBBB+--------
--B++BB+BB+B--------
--B++++BBBBB---b----
--BB+++++++Bb-bbb---
-AAA+++++++AAbbb-AAA
----B+++++AAb-b-b-b-
----B....----bbbbbbb
---++++++BB-bbbbbbb-
---++B+++B+bbbbbbbb-
--B++B++BB++AbbbbAAA
-++++B+++++-bbb-ABb-
-BBB+B+++BBA-bb--bAB
-++++B+++BB+Bbbb--b+
-[17473965] Asking 0 for move
-[17473965] Asking 1 for move
-[17474041] Got 0's move
-[17474073] Got 1's move
-[17474073] ===== Move Frame 28 =========
-[17474073] ==============================
-BBB+BBBBBB++-b---+B
-BBB++++++++++---.+B
-BBBBB+++++++++-..+B
-BBBBB+BBBBB+-AA--++
-ABBBBB+BBB++--A--A-
-+BBB++++BBA--------
-aaaBBBBBBB+--------
--a+BBB++BB+--------
--B++++B+BBBB--b----
-AB++++B++++A-bbbAAA
---B+++++++Abbbb-A--
---B++++++--b-b-b-b-
----+B...-A--bbbbbbb
---++B+++BB-bbbbbbb-
---++B++B++bbbbbbbb-
--B++B+++B++bbbbbbAA
-++B+B+++++-Abb-ABb-
-B+++B++++B-Bbb--bbA
-++++B++++B++bbb--b+
-[17474679] Asking 0 for move
-[17474679] Asking 1 for move
-[17474733] Got 0's move
-[17474769] Got 1's move
-[17474779] ===== Move Frame 29 =========
-[17474779] ==============================
-BBBBBBBBBBB+-b---+B
-BBB++++++++++---.++
-+BBBB+++++++++A..++
-BBBBB+BBBB++--A--+B
-BBBBBB+BBBB+-A----A
-+aB+++++BB---------
-aaBBBBBBBB+--------
--aBBBB+++B+--------
--+++++B++BBA--b----
-BB++++B+++Ab-bbbAAA
--B++++B+++bbbbb-A--
--B+++++++--b-b-b-b-
----++B..----bbbbbbb
---+++B+B+B-bbbbbbb-
---+++B++++bbbbbbbb-
--BB++B+++B+bbbbbbAA
-+++++B++++-bbb-ABb-
-A+++BB++++BAbb--bbb
-B++++B++++B+bbb--bB
-[17475383] Asking 0 for move
-[17475384] Asking 1 for move
-[17475431] Got 0's move
-[17475486] Got 1's move
-[17475496] ===== Move Frame 30 =========
-[17475497] ==============================
-BBB+BBBBBBB+-b---B+
-+BB++++++++++---.++
-BBBBB+++++++++AA.++
-BBBBB+BBBBB+-----++
-BBBBB+BBBBBB-A----B
-+B++++++BBB--------
-aBBBBBBBBBB--------
--BBBBB++++B--------
--+++++BB++A---b----
-B++++++B++-b-bbbAAB
-B++++++B++bbbbb-A--
-B++++B+++--b-b-b-b-
----+++BB----bbbbbbb
---++++B+++Bbbbbbbb-
---++++B+++bbbbbbbb-
--B++++B+++BbbbbbbAA
-++++++B+++-bbb-ABb-
--++BBB++++A-bb--bbb
-BBBBB+++++B+bbb--b+
-[17476103] snap_1 BUILT NEST AT (6, 12)
-[17476103] Asking 0 for move
-[17476104] Asking 1 for move
-[17476130] Got 0's move
-[17476190] Got 1's move
-[17476190] ===== Move Frame 31 =========
-[17476190] ==============================
-+BB+BBBBBB++-b--B++
-+BB++++++++++---.++
-BBBBB++++++++A--A+B
-BBBBB+BBBBBB-A---+B
-BBBBB+BBBBBBB----BB
-Ba++++++BBB--------
-BBBBBBBBBBB--------
-BBBBBB+B++A--------
--+++++BB++----b----
-++++++++B+-b-bbbABB
-++++++++B+bbbbb-A-B
-++++++B++--b-b-b-bB
----+++BBB-B-bbbbbbb
---+++++B+++bbbbbbb-
---+++++B++bbbbbbbb-
--B+++++B+++bbbbbbAA
-+++++++B++Bbbb-ABb-
-BBBBB+B+++--bb--bbb
-BBB+B++++BA+bbb--b+
-[17476800] Asking 1 for move
-[17476800] Asking 0 for move
-[17476868] Got 0's move
-[17476900] Got 1's move
-[17476900] ===== Move Frame 32 =========
-[17476900] ==============================
-++B+BBBBB+++-b--+++
-BBB++++++++++---A++
-BBBBB+++++++A----BB
-BBBBB+BBBBBBA----BB
-BBBBB+BBBBB++B---+B
-+a++++++BBB-------B
-BBBBBBBBBBA-------B
-BBBB+BB+++--------B
--+++++BBB+----b----
-+++++++++B-b-bbbBB+
-+++++++++BbbbbbbAbB
-+++++++B+--b-b-bbb+
----+++BBBB+Bbbbbbbb
---++++++B++bbbbbbb-
---++++++B+bbbbbbbb-
--B++++++B++bbbbbbAA
-BBBB++++B++bbb-ABb-
-BBB+BB+B++B-bb--bbb
-+BB++B++BA-+bbb-Bb+
-[17477506] snap_1 DESTROYED OPPONENT'S NEST AT (16, 10)
-[17477507] Asking 0 for move
-[17477507] Asking 1 for move
-[17477567] Got 0's move
-[17477610] Got 1's move
-[17477611] ===== Move Frame 33 =========
-[17477611] ==============================
-[17477625] ********* Game over! *********
-[17477633] Score breakdown: 
+...................
+...................
+.............AA..-.
+...........A-AA-.-.
+............--A--A.
+.............----..
+A.............---.-
+.............AAA---
+...............-.-A
+..............-A.--
+..............A....
+[19234709] src BUILT NEST AT (13, 11)
+[19234710] Asking 0 for move
+[19234710] Asking 1 for move
+[19234794] Got 0's move
+[19234808] Got 1's move
+[19234823] ===== Move Frame 9 =========
+[19234824] ==============================
+.+.++..............
+BBBBBBB............
+++B++BB............
++++BBB.............
+.BB+BB++...........
+..++B..+...........
+..+BB+B+...........
+..+B...............
+...................
+.............A.....
+...........A.AAA.-.
+...........--AA-.-.
+............--A---.
+A............----A.
+-.............AA-A-
+.............--A---
+A............AA-A--
+..............--A--
+.B...........A-....
+[19235431] snap_1 BUILT NEST AT (3, 6)
+[19235431] src BUILT NEST AT (14, 16)
+[19235431] src BUILT NEST AT (16, 16)
+[19235431] src BUILT NEST AT (17, 14)
+[19235433] Asking 1 for move
+[19235432] Asking 0 for move
+[19235529] Got 1's move
+[19235556] Got 0's move
+[19235558] ===== Move Frame 10 =========
+[19235559] ==============================
+BBB++.B......A.....
++BBB+BB............
+++B++BBB...........
++++BBB.............
+.BB+BBB+...........
+..+++..+...........
+..BBB++B...........
+..B+...............
+.............A.....
+.............A.....
+..........A-.AAAA-.
+...........--A--A-.
+A...........--A--A.
+-............-A--A.
+-.............A--A-
+A............--A---
+-...........AAAAA--
+..............--A--
+.+B..........--.A..
+[19236175] snap_1 BUILT NEST AT (2, 0)
+[19236175] src BUILT NEST AT (16, 11)
+[19236175] Asking 0 for move
+[19236175] Asking 1 for move
+[19236233] Got 1's move
+[19236265] Got 0's move
+[19236275] ===== Move Frame 11 =========
+[19236276] ==============================
+++BB+.B......-A....
+B+BB++B............
++BB++BBB...........
++++BBBBB...........
+.BB+BBBB...........
+..+++..+...........
+.B+BB+++...........
+..+B...B...........
+..B..........-A....
+..........A.AAAA...
+..........--AA-A-A.
+...........--A--AA.
+-...........--A--AA
+-............AA--AA
+-.............---A-
+-A...........AAA---
+-...........--AAAA-
+..B.........AA-A-A-
+BBB...B......--.-A.
+[19236883] snap_1 BUILT NEST AT (6, 3)
+[19236883] src BUILT NEST AT (12, 10)
+[19236884] src BUILT NEST AT (13, 17)
+[19236884] src BUILT NEST AT (14, 9)
+[19236884] src BUILT NEST AT (18, 13)
+[19236885] Asking 0 for move
+[19236886] Asking 1 for move
+[19236972] Got 1's move
+[19237017] Got 0's move
+[19237028] ===== Move Frame 12 =========
+[19237028] ==============================
+++BB+BBB.....--A...
++B+B+B+...........B
+BBB++++B...........
+++BB+BBB...........
+.BB+B+BB...........
+..++B..B...........
+B++BB+++...........
+..BB...+......A....
+.B+....B..A.AAAA...
+..........-.AAAA.A.
+..........--A-----.
+...........--A--AAA
+-...........-AA--AA
+-............AA---A
+-A............A--AA
+--...........-AA---
+-...........--AAA-A
+BBBB........-A-AA--
+++B..B+.....AA-A-AA
+[19237635] snap_1 BUILT NEST AT (5, 0)
+[19237636] Asking 0 for move
+[19237636] Asking 1 for move
+[19237712] Got 1's move
+[19237742] Got 0's move
+[19237754] ===== Move Frame 13 =========
+[19237754] ==============================
++BBB+B+BB...AA--AAA
++++BB+B...........+
+BBB+++B+..........B
++BBB+BBB...........
+.BB+B++B...........
+BB++B..BB..........
++++BB+++......A....
+.BBB...+..A..AA....
+.++...B+..-AAAAAAA.
+..........-AA-A-A-.
+..........--A---AAA
+...........--A--AAA
+-...........AAA----
+AA...........AA--AA
+--............---AA
+--...........AAA---
+BBB.........-AAAA-A
+++B+B.......AA--A--
+++B..BB.....----A--
+[19238366] snap_1 BUILT NEST AT (1, 5)
+[19238366] src BUILT NEST AT (11, 9)
+[19238367] src BUILT NEST AT (16, 9)
+[19238367] Asking 0 for move
+[19238367] Asking 1 for move
+[19238461] Got 0's move
+[19238477] Got 1's move
+[19238487] ===== Move Frame 14 =========
+[19238487] ==============================
+BBBB+BB++...----A--
+B++B+BBBB...AA..AAA
+BBB+++++..........+
+BBBB+BBB...........
+.BB+B++B...........
+BB++B..BBB....A...B
++++BB+++..A..A-....
+BBBB...+..-AAAAAAA.
+.++..B++..-AA-A-A-.
+..........-AA-A-AAA
+..........--A---A--
+A..........--A--AAA
+-A.........AAAA--AA
+--...........A----A
+A-............---AA
+--...........A-AA--
+BB+.B.......AAAAA--
+++BB+.B....AAA--A--
++++..+BB....-------
+[19239129] snap_1 BUILT NEST AT (7, 1)
+[19239130] Asking 0 for move
+[19239130] Asking 1 for move
+[19239244] Got 1's move
+[19239250] Got 0's move
+[19239254] ===== Move Frame 15 =========
+[19239254] ==============================
++BBB+B+B+...-----A-
+BBBB++BBBB..--A.---
+B+B++++B....A...AA+
+BBBB+BBB...........
+BBB+B+++.B....A...B
+BB++B..BB+A..A-...B
++++BB+++B.-AAAAA...
+B+BB...+..-AA-A-AAB
+.+B.B+++..--A-A-AAA
+..........AA--A-A--
+A.........--A---AAA
+-A.........-AA--AAA
+--.........AAAA----
+A-.........A.-----A
+A-............---AA
+A-...........--AA--
+B++B+B.....AAAAAA--
++++B+B+B...--A--A--
++++..B+BB...-------
+[19239868] snap_1 BUILT NEST AT (0, 4)
+[19239868] snap_1 BUILT NEST AT (5, 17)
+[19239869] Asking 0 for move
+[19239869] Asking 1 for move
+[19239976] Got 0's move
+[19239984] Got 1's move
+[19239989] ===== Move Frame 16 =========
+[19239989] ==============================
+BBBB+BB+B...------A
+BBBB++BBBB..---A---
+B+B++++B.B..-A..-AB
+BBBB+BBB......A...B
+B+B+B+++.+...A-...+
+BB++B..+BB-AAAAA..B
++++BB++++B-AA-A-..B
+++BB...+..--A-A--AA
+.+B.++++..----A-AA-
+A...B....AAA--A-AAA
+-A........--A---AAA
+--.........AAA--A--
+--.........AAAA----
+A-.........-.-----A
+A-.........A..---AA
+A-.B.......A.--AA--
++++B++B....AA-AAA--
++++++BB+B..--A--A--
++++..+B+BB..-A-----
+[19240611] Asking 0 for move
+[19240611] Asking 1 for move
+[19240757] Got 1's move
+[19240763] Got 0's move
+[19240774] ===== Move Frame 17 =========
+[19240774] ==============================
+BBBB+BBB+B..------B
+BBBB++BBBBB.-------
+++B++++B.+B.--AA-BB
+BBBB+BBB.....A-...B
+BBB+BB++.+...AA...B
+BB+++..++BBAA---A.+
+B+BBBB++++B-A-AAAAA
+++BB...+..----A-AA-
+A++B++++.AAA--A-AAA
+-ABB+....--A--A-AAA
+--........--A---A--
+--........AAAA--A--
+--.........AAAA----
+AA.........-A-----A
+AA.........-AA---AA
+--.+B.....A-A-AA-A-
+A+++BB+B..AA-AAAAA-
++++++B+B+B.--A---A-
++++..++B+BB.AA-----
+[19241383] snap_1 BUILT NEST AT (3, 8)
+[19241383] src BUILT NEST AT (12, 13)
+[19241383] src BUILT NEST AT (12, 15)
+[19241384] src BUILT NEST AT (13, 14)
+[19241384] src BUILT NEST AT (16, 6)
+[19241384] Asking 1 for move
+[19241384] Asking 0 for move
+[19241505] Got 1's move
+[19241510] Got 0's move
+[19241516] ===== Move Frame 18 =========
+[19241516] ==============================
+++BB+B+BB+B.------B
+BBBB++BBBBBB------B
+++B++++B.++B---ABB+
+BBBB+BBB....A--..BB
+BBB+BBB+.+..A--A..B
+BB+++..++++AA-A--A+
+ABBBB+B++++B--AAAA-
+AB+B...+.AAA--A-AAA
+-++B++++.-----A-AAA
+--+B+....--A--A-A--
+--.B......-AA----A-
+--.......AAAAA--AA-
+--.........-A-A----
+AAA........AAAA---A
+AAA........AAAAA-AA
+--.++B....--A--A--A
+A++++B++B.A--AAAAAA
++++++B++B+.A-AA---A
+BBB..B++B+B.AA-----
+[19242124] Asking 1 for move
+[19242124] Asking 0 for move
+[19242252] Got 0's move
+[19242258] Got 1's move
+[19242263] ===== Move Frame 19 =========
+[19242264] ==============================
+++BB+BB+BB+.------B
+BBBB++BBBB+BB-----B
+++B++++B.B++B---B++
+BB+BBBBB...A---..BB
+BBB+BBBB.+.AA-A-AB+
++B+++..++++----AAAA
+BBBBB++B+AAA-AA-A-A
+-+B+...+.-----A-A-A
+A++BB+++.-----A-A-A
+--++B....--AA-A-A--
+--.+B....AAAAA----A
+--.......---AA--AAA
+AAA........-A-A---A
+---.......AAAAA---A
+AAAA......AAAAAA-AA
+A-.+++B...--A--A---
+A+++++B+BA---AAAAAA
+A+B++BB++B.--AA----
+B+B..+B++BBAAAA---B
+[19242870] Asking 0 for move
+[19242870] Asking 1 for move
+[19243002] Got 1's move
+[19243023] Got 0's move
+[19243024] ===== Move Frame 20 =========
+[19243024] ==============================
+BaaB+B+B+B+BAA---B+
+BBBaa+BBBB+++B---B+
++aaa+++B.B+A+B--+++
+BBaaBBBB.B.-A--.BB+
+aBaaaBBB.+A----A-Aa
+ABa+a..B+++A-A--A--
+BBBBB+++BA----AAA-A
+A+++...+.-----A-A-A
+-+BBBB++.-------A--
+--+++B...-AAAAA-A--
+A-.++B...AAAAA-----
+AAA......A-AAA--AAA
+---........A-AA----
+A--A.....AAAAA----A
+AAA-.....AAAAAA--AA
+--A++++B..-AA--AA--
+A++++B+B+B---AAAAAA
+A++++B+B+B.-AAA---B
+ABB..B+B+BA----A--+
+[19243637] src DESTROYED OPPONENT'S NEST AT (2, 4)
+[19243638] src DESTROYED OPPONENT'S NEST AT (3, 1)
+[19243638] src DESTROYED OPPONENT'S NEST AT (2, 0)
+[19243638] src DESTROYED OPPONENT'S NEST AT (0, 4)
+[19243638] src DESTROYED OPPONENT'S NEST AT (2, 2)
+[19243638] src DESTROYED OPPONENT'S NEST AT (4, 4)
+[19243638] src DESTROYED OPPONENT'S NEST AT (1, 5)
+[19243638] src DESTROYED OPPONENT'S NEST AT (3, 3)
+[19243638] src DESTROYED OPPONENT'S NEST AT (2, 4)
+[19243638] src DESTROYED OPPONENT'S NEST AT (3, 1)
+[19243638] src DESTROYED OPPONENT'S NEST AT (2, 0)
+[19243638] src DESTROYED OPPONENT'S NEST AT (0, 4)
+[19243639] src DESTROYED OPPONENT'S NEST AT (2, 2)
+[19243639] src DESTROYED OPPONENT'S NEST AT (4, 4)
+[19243639] src DESTROYED OPPONENT'S NEST AT (1, 5)
+[19243639] src DESTROYED OPPONENT'S NEST AT (3, 3)
+[19243642] Asking 0 for move
+[19243660] Asking 1 for move
+[19243819] Got 1's move
+[19243842] Got 0's move
+[19243852] ===== Move Frame 21 =========
+[19243853] ==============================
+BBBB+B++B+B+-----++
+++aaa+BBBBBA++---++
++aaa+++B.+B-A+B-+B+
+aBaaaBBB.+.----.+A+
+aBaaaaBB.+---A--B-a
+aBa+a..BB+A---A-A--
+ABBB+B+++B----AAA-A
+-+B+...+.-------A--
+-+BB+BB+.-------AA-
+--++++B..AAAAAA-A--
+AAA+++B.AAAAAA--AAA
+---......-AAAA--A--
+A--A.....AA-AAA----
+----.....AAAAA----A
+-A-A.....A-AAA---AA
+-A-++B++BAAAAAAAA-A
+-+A++B++BB---AAAAAA
+-++++B++B+BA-AA---A
+A+a..B++B+------AB+
+[19244464] src BUILT NEST AT (10, 12)
+[19244465] Asking 0 for move
+[19244465] Asking 1 for move
+[19244574] Got 1's move
+[19244610] Got 0's move
+[19244621] ===== Move Frame 22 =========
+[19244621] ==============================
++aBa+B+++B++-----++
+++aaa+BBBBB-A+---++
++Baa+++B.++B-++B+++
+a+aaaBBB.+.--A-.+-+
+aaaaaB++.+----A-A-a
+aBa+a..BBB----A---A
+-BBB++B+++-----AA--
+-+++...+.-------A--
+-BBB++BB.-------A-A
+AAA++++.AAAAAAA-AAA
+---+++BAA--AA---A--
+A--A.....AAAAA--AA-
+----....AAAAAAA----
+A---.....AAAAA----A
+A---AB...AAAAA---A-
+AA-++B++B---A-AAAA-
+-A-A+B++++AAAAAAAA-
+-++++B+++B+--A-A---
+-BB..B+++BB------+A
+[19245227] Asking 0 for move
+[19245228] Asking 1 for move
+[19245344] Got 1's move
+[19245401] Got 0's move
+[19245412] ===== Move Frame 23 =========
+[19245412] ==============================
++aaB+B++++B+-----++
++Baaa+BBBBBB-A-B-++
++aaa+++B.+++BA+++++
+a+aaaBBB.+.---A.A-+
+aaaaaaB+.+----A---A
+BBa+a..+BBB----AA--
+-BBB+++B++------A--
+-+++...+.-------A--
+AABB+++BAAAAAAA-AAA
+--B++++.---A--A-A--
+A--A++AA----A---AA-
+----....AAAAAAA-A--
+----....--A--AA----
+AA--....AAAAAA----A
+-A---+..BAAAAA---A-
+-A-A++B++---A-AAAA-
+-A--BB++++--AAAAAA-
+-BB++B+++BAAAA--AA-
+A+a..B+++++--A---+-
+[19246016] Asking 0 for move
+[19246016] Asking 1 for move
+[19246115] Got 1's move
+[19246154] Got 0's move
+[19246154] ===== Move Frame 24 =========
+[19246154] ==============================
++BBa+B++++++-A---++
+++aaa+BBBBBBB-A+B++
++aaa+++B.++++-A+A++
+a+aaaBBB.+.---A.--A
+aBaaaa+B.+-----A--a
+aaaaa..+++B-----AAB
+-aBaa+++B+B-----A--
+-+Ba...+.--AAAA-AA-
+AAABa+++BA----A----
+AB+A++AA--AAA-A-AA-
+----++------A---A--
+----...AAAAAAAA-A--
+----....-AA-AAA----
+AAA-....AA-AAA----A
+-----+B.AA-AAA---A-
+-A--A++++---A-AAAA-
+-A-BBB++++-AA-AAAA-
+AB+++B++++BA-A---AA
+-+a..B++++BA-A---+-
+[19246758] src DESTROYED OPPONENT'S NEST AT (3, 6)
+[19246759] src DESTROYED OPPONENT'S NEST AT (3, 8)
+[19246759] Asking 0 for move
+[19246764] Asking 1 for move
+[19246848] Got 1's move
+[19246898] Got 0's move
+[19246898] ===== Move Frame 25 =========
+[19246898] ==============================
++aaB+B++++BB-A---++
+++aaa+BBBBB++A-AA++
++aaa+++B.++++--A-+A
+aBaaaBBB.+.----A---
+aaaaaa++.+--------a
+aaaaa..B+++B----A-A
+-aaBa++++B+B-AA-AA-
+A+Aa...+.--A--A-A--
+--aaa+AA+-AAA------
+-A+a++-----AA-AAAAA
+----++--A---A-A-A--
+----...---A--A--A--
+----...AAAAAAAA----
+AAAA...AA-AAAA----A
+-----+BAA---AA---A-
+---B-B+++--AAAAAAA-
+-A-++B++++--AAAAAA-
+AA+++B+++++A-AA--AA
+-Ba..B++++A------+-
+[19247503] Asking 0 for move
+[19247503] Asking 1 for move
+[19247569] Got 1's move
+[19247663] Got 0's move
+[19247673] ===== Move Frame 26 =========
+[19247673] ==============================
++aBa+B+++B++BA---++
+++aaa+BBBB+++A--AA+
++Baa+++B.++++--AA+A
+a+aaa+BB.+.--------
+aaaaaB++.+------A-A
+aaaaa..B++++----AA-
+-aaaa+++++B+--A-A--
+-AAB..AA.-A--AA--A-
+--aaa+--+--A--A----
+A-Aa++--A--AA-AAAAA
+----++------AAA-A--
+----...--A---A--A--
+----..AAAAAAAAA----
+AAAAA..-----AA----A
+-----BAAA-AAAA---A-
+---+BB++A---AAAAAA-
+---++B++++-AAAAAAA-
+AA+++B++++A-AA-A-A-
+-Aa..B++++-------A-
+[19248277] Asking 0 for move
+[19248277] Asking 1 for move
+[19248336] Got 1's move
+[19248459] Got 0's move
+[19248460] ===== Move Frame 27 =========
+[19248460] ==============================
++aaaBB++++B+A---AA+
+++aaa+BBBBB+A-----+
+Baaa+++B.++++---AAA
+a+aaa+BB.+.-----A-A
+aaaaaaB+.+------AAa
+aaaaa..B++++----A--
+-aaaa+AA++++-AA-AA-
+--Aa..--.-BA--A----
+--Aaa+--A--AA-AA---
+AA-a++-----AAAA-AAA
+----++------AAA--A-
+----...AAAAAAAA-AA-
+AAAAA.----A--AA---A
+-----.A-----AA----A
+----BA------AA---A-
+---++B+AA-AAAAAAAA-
+---+++++++A-AAAAAA-
+-A+++BB++A--AAA--A-
+-AB..B++++-------A-
+[19249065] Asking 0 for move
+[19249065] Asking 1 for move
+[19249125] Got 1's move
+[19249271] Got 0's move
+[19249271] ===== Move Frame 28 =========
+[19249271] ==============================
++aaB+B++++BA-----AA
+++aaa++BBBBB------+
++aaa++BB.+++A---AA-
+a+aaa+B+.+.-----AA-
+aaaaaBBB.+--------a
+aaaaa.AA++++---A-A-
+-aaaa+--++++AAAAA--
+--AA..--A-+B--AA---
+--aaa+-----A--A----
+AAAa++-----AAAA-AAA
+----++----AAAAA---A
+AAAAA.AAA-A-AAA-AAA
+-----.----A--AA----
+A----.------AA----A
+----ABA-----AA---AA
+---+++A-----AAAAAAA
+---++B++AAAAAAAAAAA
+--+++B+B+-A--A----A
+-AA..B++++--AAA---A
+[19249877] Asking 0 for move
+[19249877] Asking 1 for move
+[19249918] Got 1's move
+[19250078] Got 0's move
+[19250078] ===== Move Frame 29 =========
+[19250078] ==============================
+AaaB+BB++BBBAAA---A
+++aaa++B+B++----AA+
++aaa++BB.++A----AA-
+a+aaa+BB.+.--------
+aaaaaaB+.+-------Aa
+aaaaa.--++++--A----
+-aaaa+--++++-AAAA--
+---AA.---A+AAAA----
+--aaa+-------AA-A--
+AAAA++----AAAAA-A-A
+AAAAA+----AAAAA-AAA
+-----AAA--A-AAA-A--
+-----.----A-AAA----
+AA---.------A-----A
+A----AA-----AA---AA
+A--++B------AAAAAAA
+A--++B++---AAAAAAAA
+A-+++B+++A-AAAA----
+A-AA.+B+++A--A-----
+[19250683] Asking 0 for move
+[19250683] Asking 1 for move
+[19250722] Got 1's move
+[19250902] Got 0's move
+[19250903] ===== Move Frame 30 =========
+[19250903] ==============================
+AAaABB+++++AAA-----
+++aaa++B++BA----AAA
++aaa++BB.++--------
+a+aaa+BB.+.------A-
+aaaaaBBB.+--------a
+aaaaa.--++++-A-----
+-aaaa+--+A+AAAAAA--
+---aAA----+--AA-A--
+--aaa+----AAAAA----
+AAAAA+----AAAAA-AAA
+-----AAA--AAAAA-A--
+----------A-AAA-A--
+-----.----A--AA----
+AAA--.------A-----A
+AA----------AA---AA
+AA-++AA-----AAAAAAA
+AA-+++++----AAAAAAA
+-A+++BB++---AAA----
+--aA.BB++A-AAAA----
+[19251508] Asking 0 for move
+[19251508] Asking 1 for move
+[19251540] Got 1's move
+[19251771] Got 0's move
+[19251781] ===== Move Frame 31 =========
+[19251781] ==============================
+-aAaBaa++A+AAAA----
+A+aaaa+BB++AA----AA
++aaa++B+.++------A-
+a+aaa+BB.+.--------
+aaaaBaBB.+--------a
+aaaaa.BB+A+AAAAAA--
+-aaaA+--+-+-----A--
+---a-A----AAAAAA---
+--aaa+----AAAAA-A--
+AAAAAAAA--AAAAA-A-A
+----------AAAAA-A--
+----------A-AAA-AA-
+-----.----A--AA----
+AAAA-.-----AA-----A
+AAA---------AA---AA
+AAA++-A-----AAAAAAA
+AAA++AB+----AAAAAAA
+--A+aBa++---AAA----
+--a-AB+B+---AAA----
+[19252384] src DESTROYED OPPONENT'S NEST AT (5, 17)
+[19252384] src DESTROYED OPPONENT'S NEST AT (5, 0)
+[19252385] Asking 0 for move
+[19252385] Asking 1 for move
+[19252421] Got 1's move
+[19252724] Got 0's move
+[19252724] ===== Move Frame 32 =========
+[19252724] ==============================
+-aaAAaa++-AAAAA----
+AAaaaa+BBBAA------A
++aaa++BB.++-------A
+a+aaa+B+.+.--------
+aaaaaBB+.+------A-a
+aaaaB.BBBAAAAAA----
+-aaaAA--+-AAAAAAA--
+---a------AAAAA-A--
+AAAAAAAA--AAAAA-A-A
+---a------AAAAA-A--
+----------AAAAA-A--
+------------AA--AAA
+-----.---AA-AAA----
+AAAAA.----AAA-----A
+AAAA--------AA---AA
+AAAA+-------AAAAAAA
+AAAA+BA+----AAAAAAA
+---Aaaa++---AAA----
+--a-Ba++B---AAA----
+[19253328] Asking 1 for move
+[19253328] Asking 0 for move
+[19253355] Got 1's move
+[19253727] Got 0's move
+[19253728] ===== Move Frame 33 =========
+[19253728] ==============================
+-aaaaaa++----------
+A-aaaa+BB+AAAAA----
+AAaa++BB.++--------
+a+aaa+B+.+.-----A--
+aaaaaBB+.+--AAA---a
+aaaaaAB+BBA-----A--
+-aaaB---+-AAAAA-A--
+AAAAAAAA--AAAAA-A-A
+--aaa-----AAAAA-A--
+---a------AAAAA-A--
+-----------AA-A--A-
+A------------A--AAA
+-----A--AAAAAAA----
+AAAAAA---AAAA-----A
+AAAAA-------AA---AA
+AAAAA-------AAAAAAA
+AAAAAaB+----AAAAAAA
+----Aaa++--AAAA----
+--aAAa+++B-AAA-----
+[19254332] src BUILT NEST AT (5, 12)
+[19254332] Asking 1 for move
+[19254332] Asking 0 for move
+[19254355] Got 1's move
+[19254658] Got 0's move
+[19254658] ===== Move Frame 34 =========
+[19254659] ==============================
+-aaaaaa++----------
+-Aaaaa+BBAA--------
+-Aaa+B+B.++-AAA----
+aAaaa+B+.+.-AAA--A-
+aaaaaaB+.+------A-a
+aaaaaBB++BAAAAA-A--
+AAaaa-AA+-AAAAA-A-A
+---AB-----AAAAA-A--
+--aaa-----AAAAA-A--
+---a-------AA-A-AA-
+A----------AAAA-AAA
+-------------A--A--
+-----AA---A-A-A----
+AAAAAAA-AAAAAAA---A
+AAAAAA---AAAAA---AA
+AAAAAA------AAAA-AA
+AAAAAAB+----AAAAAAA
+----aaa++---AAAA---
+--a-AA+++BAAAAA----
+[19255266] Asking 0 for move
+[19255266] Asking 1 for move
+[19255285] Got 1's move
+[19255590] Got 0's move
+[19255590] ===== Move Frame 35 =========
+[19255590] ==============================
+-aaaaaaa+----------
+--AaaBaaAA---------
+-AAa+++B.++AAA---A-
+a-aaa+B+.+.AAA--A--
+aaaaaaB+.+--------a
+aaaaa+AA+AAAAAAAA--
+AAAaa---+-AAAAA-A--
+---B+-----AAAAA-AA-
+--aaa------AA-A-AA-
+A--a-------AAAA-AAA
+-----------AAAA-A--
+-------------A--A--
+-----AA---A-A-A----
+AAAAAAA---A-AAA---A
+AAAAAAA-AAAAAAA--AA
+AAAAAAA--AAAAAAA--A
+AAAAAAA+----AAAAAAA
+----aaa++---AAAA---
+--a--AA+++AAAAAA---
+[19256194] src DESTROYED OPPONENT'S NEST AT (7, 1)
+[19256194] Asking 0 for move
+[19256194] Asking 1 for move
+[19256206] Got 1's move
+[19256678] Got 0's move
+[19256679] ===== Move Frame 36 =========
+[19256679] ==============================
+[19256683] ********* Game over! *********
+[19256703] Score breakdown: 
 
 === Team src ===
 Missed turns: 0
 
-Non-permanent tiles: 63
-Permanent tiles: 5 * 2
+Non-permanent tiles: 291
+Permanent tiles: 54 * 2
 ---------------------------------
-Total Score: 73
+Total Score: 399
 
 === Team snap_1 ===
 Missed turns: 0
 
-Non-permanent tiles: 226
-Permanent tiles: 67 * 2
+Non-permanent tiles: 13
+Permanent tiles: 0 * 2
 ---------------------------------
-Total Score: 360
+Total Score: 13
 
 
-Winner: snap_1
+Winner: src

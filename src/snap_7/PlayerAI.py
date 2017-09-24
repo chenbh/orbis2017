@@ -26,7 +26,6 @@ class PlayerAI:
     def do_move(self, world, friendly_units, enemy_units):
         # dictionary of Units whose' task it is to go to a spot to build a nest
         builders = {}
-        assigned_builder_units = set()
 
         # go through list of designated nests and assign builders to finish it or remove the designation if needed
         for n in self.nests:
@@ -40,7 +39,6 @@ class PlayerAI:
 
                 # save possible builders
                 candidate_builders = []
-                candidate_assigned_builder_units = set()
 
                 # assign a builder Drone to each neighbour tile of a designated nest
                 for d, t in tiles.items():
@@ -50,38 +48,18 @@ class PlayerAI:
                             self.occupied.append(n)
                             is_invalid_nest = True
                             break
-                        closest_friendly = world.get_closest_friendly_from(
-                            t.position,
-                            None
-                        )
-                        if closest_friendly and world.get_shortest_path(t.position, closest_friendly.position, self.nests):
+                        closest_friendly = world.get_closest_friendly_from(t.position, self.nests)
+                        if world.get_shortest_path(t.position, closest_friendly.position, self.nests):
+                            # FIXME: some fireflies are assigned two spots. Only one will be taken
                             candidate_builders.append((closest_friendly.uuid, t.position))
-                            candidate_assigned_builder_units.add(closest_friendly.position)
                         else:
                             self.nests.remove(n)
                             self.occupied.append(n)
                             is_invalid_nest = True
                             break
-
-                if not is_invalid_nest:
-                    for builder in candidate_builders:
-                        builders[builder[0]] = builder[1]
-                        self.occupied.append(builder[1])
-                    assigned_builder_units.update(candidate_assigned_builder_units)
-
-        # assign nest locations if they aren't assigned on first pass
-        assigned_locations = builders.values()
-        for n in self.nests:
-            tiles = world.get_tiles_around(n)
-            for d, t in tiles.items():
-                if t.position not in assigned_locations:
-                    closest_friendly = world.get_closest_friendly_from(
-                        t.position,
-                        assigned_builder_units
-                    )
-                    if closest_friendly and world.get_shortest_path(t.position, closest_friendly.position, self.nests):
-                        builders[closest_friendly] = t.position
-
+                for builder in candidate_builders:
+                    builders[builder[0]] = builder[1]
+                    self.occupied.append(builder[1])
 
         self.current_nests = world.get_friendly_nest_positions()
 
@@ -169,19 +147,24 @@ class Drone:
                 num_friendly_adjacent+=1
         return num_friendly_adjacent
 
-    def tiles_distance_two_around(self, position):
-        immediate_tiles = list(self.world.get_tiles_around(position).values())
-        all_nearby_tiles = set([tile for nearby_tile in immediate_tiles for tile in list(self.world.get_tiles_around(nearby_tile.position).values())])
-        all_nearby_tiles.update(immediate_tiles)
-        current_tile = self.world.get_tile_at(position)
-        all_nearby_tiles.discard(current_tile)
-        return list(all_nearby_tiles)
-
     # what to do if there's an enemy adjacent to this drone
     def fight(self):
         if self.enemy_distance == 1:
             self.move(self.closest_enemy.position)
             return True
+
+            # Attack the largest health enemy
+            #enemy_dict = self.world.get_position_to_enemy_dict()
+            # target_enemy = None
+            # for d, position in self.world.get_neighbours(self.unit.position).items():
+            #     if position in enemy_dict:
+            #         candidate_enemy = enemy_dict[position]
+            #         if target_enemy is None:
+            #             target_enemy = candidate_enemy
+            #         else:
+            #             target_enemy = candidate_enemy if candidate_enemy.health > target_enemy.health else target_enemy
+            #         self.move(target_enemy.position)
+            #         return True
         return False
 
     # what to do if there's an enemy threatening a nest
@@ -247,6 +230,8 @@ class Drone:
 
     # what to do if this Drone is desginated as a builder for a nest
     def build_nest(self):
+        # does checking for merged uuids help?
+        # if any(self.unit.is_merged_with_unit(uuid) for uuid in self.builders.keys()) or self.unit.uuid in self.builders:
         if self.unit.uuid in self.builders:
             path = self.world.get_shortest_path(self.unit.position, self.builders[self.unit.uuid], self.nests)
             if path:
@@ -258,12 +243,12 @@ class Drone:
     def start_nest(self):
         if self.enemy_distance < PERSONAL_SPACE * 2:
             return False
-        tiles = list(self.world.get_tiles_around(self.unit.position).values())
+        tiles = self.world.get_tiles_around(self.unit.position)
 
         most_ideal_tile = None
         most_adjacent_friendly = -1
         first_candidate_tile = None
-        for t in tiles:
+        for d, t in tiles.items():
             if t.is_neutral() and t.position not in self.nests and t.position not in self.occupied:
                 num_friendly = self.num_adjacent_friendly_and_walls(t)
                 if first_candidate_tile is None:
